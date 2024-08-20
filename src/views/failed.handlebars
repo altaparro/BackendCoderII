@@ -1,139 +1,94 @@
 <body>
     <main>
-        <section class="products">
-            <h1 class="main-title">¡UPS! ALGO SALIO MAL</h1>
+        <section class="error-message">
+            <h1 class="main-title">¡Lo sentimos! Algo salió mal</h1>
+            <p class="error-description">Estamos trabajando para solucionarlo. Por favor, vuelve más tarde.</p>
         </section>
 
         <div class="button-container">
-            <a href="/" class="btn btn-secondary">Ir al inicio</a>
+            <a href="/" class="btn btn-secondary">Volver al inicio</a>
         </div>
     </main>
 
     <style>
+        /* Estilo general */
         * {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        header {
-            background-image: url("../../images/pages/frontPage.png");
-            background-size: cover;
-            background-position: center;
-            color: white;
+        body {
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        main {
             display: flex;
             flex-direction: column;
             align-items: center;
+            padding: 20px;
         }
 
-        .nav-container {
-            background-color: rgb(36, 36, 36);
+        .error-message {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 40px;
+            max-width: 600px;
             text-align: center;
-            justify-content: center;
-            font-weight: bold;
-            width: 100%;
-            height: 40px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
         }
 
-        .paragraph {
-            background-color: rgb(36, 36, 36);
-            text-align: center;
-            justify-content: center;
-            font-weight: bold;
-            width: 100%;
-            padding: 5px;
+        .main-title {
+            font-size: 36px;
+            font-weight: 700;
+            color: #e74c3c;
+            margin-bottom: 10px;
         }
 
-        .nav-container nav ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            margin-top: 10px;
-        }
-
-        .nav-container nav ul li {
-            margin: 0 25px;
-        }
-
-        .nav-container nav ul li a {
-            color: white;
-            text-decoration: none;
-        }
-
-        .nav-container nav ul li a:hover {
-            text-decoration: none;
-            color: rgba(193, 255, 114, 0.87);
-            border-bottom-style: solid;
-            border-bottom-color: rgba(12, 192, 223, 0.87);
-        }
-
-        .logo-container {
-            margin: 20px 0;
-        }
-
-        .logo-container .logo {
-            max-height: 400px;
-        }
-
-        .text {
-            background-color: rgb(36, 36, 36);
-            color: white;
-            text-align: center;
-            padding: 5px 0;
-            font-weight: bold;
-        }
-
-        .products .title {
-            text-align: center;
-            padding-bottom: 20px;
-        }
-
-        .products .main-title {
-            text-align: center;
-            padding-bottom: 20px;
-            font-size: 34px;
-            font-weight: bold
+        .error-description {
+            font-size: 18px;
+            color: #555;
         }
 
         .button-container {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
             margin-top: 20px;
         }
 
         .btn {
-            padding: 10px 20px;
-            font-size: 34px;
-            font-weight: bold;
-            border: 3px solid white;
-            cursor: pointer;
-            border-radius: 20px;
+            display: inline-block;
+            padding: 12px 25px;
+            font-size: 18px;
+            font-weight: 700;
+            border: none;
+            border-radius: 5px;
             text-transform: uppercase;
             text-decoration: none;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
         }
 
         .btn-secondary {
-            background: #44bb87;
-            color: white;
+            background-color: #3498db;
+            color: #fff;
         }
 
         .btn-secondary:hover {
-            opacity: 0.8;
-            color: black;
-            border: 3px solid black;
+            background-color: #2980b9;
+            color: #fff;
         }
 
         footer {
-            background-color: #333333;
-            color: #ffffff;
+            background-color: #333;
+            color: #fff;
             text-align: center;
-            padding: 10px 0;
-            width: 100%;
+            padding: 10px;
+            position: fixed;
             bottom: 0;
+            width: 100%;
         }
     </style>
 </body>
