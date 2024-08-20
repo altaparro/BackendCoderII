@@ -24,7 +24,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
 app.use(cookieParser());
 app.use(session({
-  secret: "fedeCoder",
+  secret: "altaparro",
   resave: true,
   saveUninitialized: true,
   store: MongoStore.create({
