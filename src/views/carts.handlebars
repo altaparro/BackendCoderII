@@ -1,0 +1,100 @@
+<body>
+    <main>
+        <section class="products">
+            <h1 class="title">CARRITO DE COMPRAS</h1>
+            <div class="product-card">
+                {{#each productos}}
+                <div class="product--card">
+                    <h1 class="product--title">{{this.product.title}}</h1>
+                    <p class="product--stock">Precio unitario: ${{this.product.price}} | Cantidad: {{this.quantity}}</p>
+                </div>
+                {{/each}}
+            </div>
+        </section>
+    </main>
+    <script src="https://cdn.socket.io/4.7.4/socket.io.min.js"></script>
+    <script src="/js/main.js"></script>
+    
+    
+    <style>
+        * {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f0f2f5;
+            color: #333;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        .products {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .title {
+            text-align: center;
+            font-size: 36px;
+            font-weight: 700;
+            color: #004085;
+            margin-bottom: 30px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-card {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .product--card {
+            flex: 0 0 calc(33.333% - 20px);
+            box-sizing: border-box;
+            padding: 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            border: 3px solid rgba(0, 31, 85, 0.2);
+            border-radius: 15px;
+            background-color: #fff;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .product--card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+        }
+
+        .product--title {
+            font-size: 1.6em;
+            font-weight: bold;
+            color: #007bff;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .product--stock {
+            font-size: 1.2em;
+            color: #495057;
+            text-align: center;
+        }
+
+        footer {
+            background-color: #333333;
+            color: #ffffff;
+            text-align: center;
+            padding: 10px 0;
+            width: 100%;
+            position: fixed;
+            bottom: 0;
+        }
+    </style>
+</body>
