@@ -8,25 +8,25 @@
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="icon" href="./images/pages/icon.png">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-6Lmqe+RlqT0BHo8MN3dzZeoYJ5SPWMeK29E6qng9lN3xAdmc0t6HoNPoqI0bYI6zMfKN8ByUgCq+2eyXOH9d0A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
     {{#unless isRegisterPage}}
     <header>
-        <div class="nav-container">
-            <nav>
-                <ul>
+        <div class="header-container">
+            <div class="logo-container">
+                <img src="images/logo.png" class="logo">
+            </div>
+            <nav class="navbar">
+                <ul class="nav-links">
                     <li><a href="/"><i class="fas fa-home"></i> INICIO</a></li>
                     <li><a href="/api/sessions/register"><i class="fas fa-user-plus"></i> REGISTRARSE</a></li>
                     <li><a href="/api/sessions/login"><i class="fas fa-sign-in-alt"></i> INICIAR SESIÓN</a></li>
                 </ul>
             </nav>
         </div>
-        <div class="logo-container">
-            <img src="images/logo.png"  class="logo">
-        </div>
     </header>
-  
     {{/unless}}
 
     {{{body}}}
